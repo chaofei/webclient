@@ -1,6 +1,7 @@
 
 var webpack = require('webpack');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path=require('path');
 var cssExtract=new ExtractTextPlugin("[name].[contenthash:8].bundle.css");
 module.exports={
@@ -35,16 +36,13 @@ module.exports={
                 warnings: false
             }
         }),
-        cssExtract
-    ],
-    regExp: {
-        js: {
-            version: /^index\.[a-zA-Z0-9]{8}\.bundle\.js$/,
-            flag: /index.bundle.js/g
-        },
-        css: {
-            version: /^index\.[a-zA-Z0-9]{8}\.bundle\.css$/,
-            flag: /index.bundle.css/g
-        }
-    }
+        cssExtract,
+        new HtmlWebpackPlugin({
+            template:'../src/index.html',
+            minify:{ //压缩HTML文件
+                removeComments:true, //移除HTML中的注释
+                collapseWhitespace:true //删除空白符与换行符
+            }
+        })
+    ]
 }

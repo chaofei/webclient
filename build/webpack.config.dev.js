@@ -12,7 +12,7 @@ module.exports={
     },
     output:{
         path:           path.resolve(__dirname, "../release"),//__dirname+'/../release',
-        publicPath:     "",//dev server 会从此路径去拿hot-update.json
+        publicPath:     "/release/",//dev server 会从此路径去拿hot-update.json
         filename:       '[name].bundle.js'
     },
     externals: {
