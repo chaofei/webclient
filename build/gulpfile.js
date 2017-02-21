@@ -25,6 +25,7 @@ gulp.task('concat-lib',function(){
 gulp.task('build-dev-index',function(){
     gulp.src('../src/index.html')
         .pipe(greplace('</body>', '<script src="/release/index.bundle.js"></script></body>'))
+        .pipe(greplace('</head>', '<script src="/src/restful/local/gateway.js"></script></head>'))
         .pipe(concat('dev_index.html'))
         .pipe(gulp.dest('../release'));
 })

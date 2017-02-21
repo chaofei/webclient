@@ -5,7 +5,7 @@ $arr = [
     ['a'=>111,'b'=>222,'c'=>333],
 ];
 $json = json_encode($arr);
-$cb = $_GET['callback'];
+$cb = @$_GET['callback'];
 if($cb){
     printf('typeof %s === "function" && %s(%s)', $cb, $cb, $json);
 } else {
