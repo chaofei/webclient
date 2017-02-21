@@ -4,10 +4,18 @@ var template=require('./module1.html');
 // 定义组件
 var comm = Vue.extend({
     template: template,
-    data:function () {
-        return {
-            items:[{a:1,b:2,c:3},{a:4,b:5,c:5},{a:7,b:8,c:9},{a:'a',b:'b',c:'c'}]
-        }
+    data:{
+        items : []
+    },
+    ready:function(){
+        var url='http://ccf.com/static/webpack-gulp-vue/php/module1.php';
+        this.$http.get(url)
+            .then((response) => {
+                this.$set('items', response.data)
+            })
+            .catch(function(response) {
+                console.log(response)
+            })
     }
 });
 module.exports=comm;
