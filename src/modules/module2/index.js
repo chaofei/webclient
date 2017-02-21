@@ -10,7 +10,7 @@ var com = Vue.extend({
         'sub-com': function (resolve) {
             setTimeout(function(){
                 require(['./sub_modules/sub_module.js'], resolve)
-            },3000);
+            },2000);
         }
     }
 });

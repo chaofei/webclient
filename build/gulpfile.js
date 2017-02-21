@@ -27,7 +27,7 @@ gulp.task('webpack-dev',['concat-lib'],function(){
     var compiler = webpack(config);
     var server = new WebpackDevServer(compiler, {
         contentBase: "../",
-        // publicPath: "/release/",
+        publicPath: "/release/",
         hot: true,
         compress: false,
         stats: { colors: true }

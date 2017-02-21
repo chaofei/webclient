@@ -20,9 +20,7 @@ module.exports={
         loaders: [
             { 
                 test: /\.css$/, 
-                loader: cssExtract.extract("style-loader", "css-loader") 
-                // loader: ExtractTextPlugin.extract("style-loader", "css-loader") 
-                // loader: 'style-loader!css-loader' 
+                loader: cssExtract.extract("style-loader", "css-loader")
             },
             {
                 test:/\.html$/,

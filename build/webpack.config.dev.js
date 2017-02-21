@@ -4,7 +4,7 @@ var path=require('path');
 module.exports={
     //这里写成数组是为了dev server插入服务配置
     entry: {
-        app:[
+        index:[
             "webpack-dev-server/client?http://localhost:8080/", 
             "webpack/hot/dev-server", 
             '../src/app.js'
@@ -12,7 +12,7 @@ module.exports={
     },
     output:{
         path:           path.resolve(__dirname, "../release"),//__dirname+'/../release',
-        publicPath:     "/release/",//dev server 会从此路径去拿hot-update.json
+        publicPath:     "",//dev server 会从此路径去拿hot-update.json
         filename:       '[name].bundle.js'
     },
     externals: {
