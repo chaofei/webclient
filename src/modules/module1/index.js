@@ -9,8 +9,8 @@ var comm = Vue.extend({
     },
     ready:function(){
         var url='http://ccf.com/static/webpack-gulp-vue/php/module1.php';
-        this.$http.get(url)
-            .then((response) => {
+        this.$http.jsonp(url)
+            .then(function(response){
                 this.$set('items', response.data)
             })
             .catch(function(response) {
