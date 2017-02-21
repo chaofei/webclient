@@ -26,7 +26,7 @@ gulp.task('build-dev-index',function(){
     gulp.src('../src/index.html')
         .pipe(greplace('</body>', '<script src="/release/index.bundle.js"></script></body>'))
         .pipe(concat('dev_index.html'))
-        .pipe(gulp.dest('../src'));
+        .pipe(gulp.dest('../release'));
 })
 
 /**
