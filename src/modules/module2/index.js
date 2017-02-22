@@ -7,7 +7,7 @@ require('../../css/modules/module2.css');
 
 // 定义组件
 var com = Vue.extend({
-    template: '<p class="compo2">组件2</p><sub-com></sub-com>',
+    template: '<p class="compo2">组件2(延迟加载css)</p><sub-com></sub-com>',
     //异步的延时模块，用这种方式，模块2和模块2.1会被分开打包
     components: {
         'sub-com': function (resolve) {
