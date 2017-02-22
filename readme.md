@@ -22,6 +22,10 @@ demo是一个简单的vue项目，使用了vue-router，并演示了模块的延
 
 访问http://localhost:8080/release/dev_index.html 可以查看效果
 
+#### 6.1.1 正式环境的restful网关配置在：src/restful/gateway.js
+#### 6.1.2 正式环境的restful接口配置在：src/restful/api.js
+#### 6.1.3 本地用到的restful网关配置在：src/restful/local/gateway.js
+#### 6.1.4 本地用到的restful接口返回如：src/restful/local/demo/api1.json
 
 ### 6.2打包构建代码
 根目录运行 npm run build
