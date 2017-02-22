@@ -1,7 +1,8 @@
 
 var Vue = require('vue');
 //该组件用到的css
-require('../../css/modules/module2.css');
+// require('../../css/modules/module2.css');
+require('css/modules/module2.css');
 //用这种方式，模块2和模块2.1就会被打包到一起
 //var sub_com=require('./sub_com.js');
 

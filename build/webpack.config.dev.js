@@ -31,6 +31,12 @@ module.exports={
             }
         ]
     },
+    resolve: {
+        root :[
+            path.resolve(__dirname, '../src')
+        ],
+        extensions: ['', '.js', '.css'] //自动扩展文件后缀名，意味着我们require模块可以省略不写后缀名
+    },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
     ],

@@ -1,6 +1,6 @@
 
 var Vue = require('vue');
-var RestfulApi = require('../../restful/api.js');
+var RestfulApi = require('restful/api.js');
 var template=require('./module1.html');
 // 定义组件
 var comm = Vue.extend({
